@@ -5,12 +5,10 @@
   </head>
   <body bgcolor="#7CB9E8">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
-  
-   <input id="audio_file" required  multiple="multiple" type="file" accept="audio/mp3" /> 
-   <button onclick = "changeSong()">Change</button>
+  <!--  <input id="audio_file" required  multiple="multiple" type="file" accept="audio/mp3" />  -->
+    <input type="file" id="audio_file" accept="audio/mp3"  multiple/>
+    <button onclick = "changeSong()">Change</button>
 
-<input type="file" id="uploadImage" name="termek_file" class="file_input" multiple/>
-<div id="result" class="uploadPreview">
 
 
 
@@ -23,7 +21,7 @@
 
   <script type="text/javascript">
     //https://stackoverflow.com/questions/14074833/using-local-file-for-web-audio-api-in-javascript
-    var audio = document.getElementById('audio_file')
+    
     function getRandomInt(max) {
       return Math.floor(Math.random() * Math.floor(max));
     }	
@@ -76,48 +74,18 @@
               audio_player.src = file; 
               audio_player.play();
       }else if(len > 1){
-            playRandom(audio,files,len)
+            playRandom(document.getElementById('audio_file'),files,len)
       }
     }
-    audio.onchange = function(){
-    changeSong()
-    };
 
 
-
-
-
-
-
-
-
-
-
-
+    //var audio = document.getElementById('audio_file')
     window.onload = function() {
-  if (window.File && window.FileList && window.FileReader) {
-    var filesInput = document.getElementById("uploadImage");
-    filesInput.addEventListener("change", function(event) {
-      var files = event.target.files;
-      var output = document.getElementById("result");
-      for (var i = 0; i < files.length; i++) {
-        var file = files[i];
-        if (!file.type.match('image'))
-          continue;
-        var picReader = new FileReader();
-        picReader.addEventListener("load", function(event) {
-          var picFile = event.target;
-          var div = document.createElement("div");
-          div.innerHTML = "<img class='thumbnail' src='" + picFile.result + "'" +
-            "title='" + picFile.name + "'/>";
-          output.insertBefore(div, null);
-        });        
-        picReader.readAsDataURL(file);
+        if (window.File && window.FileList && window.FileReader) {
+         document.getElementById("audio_file").onchange = function(){changeSong()};
         }
-
-        });
       }
-    }
+
   </script>
   </body>
   </html>
