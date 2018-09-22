@@ -1,0 +1,64 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+  	<title>Music App</title>
+  </head>
+  <body bgcolor="#7CB9E8">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+  <input id="audio_file" multiple type="file" accept="audio/mp3" />
+  <audio id="audio_player" />
+  <script type="text/javascript">
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
+  	//https://stackoverflow.com/questions/14074833/using-local-file-for-web-audio-api-in-javascript
+  	var audio = document.getElementById('audio_file')
+    
+
+    function playRandom(audio,files,len){
+          var song_no = getRandomInt(len)
+          var file = URL.createObjectURL(files[song_no]); 
+                  audio_player.src = file; 
+                  audio_player.currentTime = 20
+                  audio_player.play();
+                  setTimeout(()=>{                          
+                      var audio_len = (document.getElementById("audio_player").duration);
+                      //finding two random points on audio
+                        var a1 = getRandomInt(audio_len)
+                        var a2 = getRandomInt(audio_len)
+                        var min,max;
+                        if (a1>=a2){
+                        max=a1
+                        min=a2
+                        }
+                        else{
+                        max=a2
+                        min=a1
+                        }
+                        console.log(min+ ":"+ max)
+                    audio_player.src = URL.createObjectURL(files[song_no]);
+                    audio_player.currentTime = min
+                    audio_player.play();
+                    setTimeout(()=>{  
+                      playRandom(audio,files,len)
+                    },max*60)
+                  },1000)
+
+    }//of  play randomm function
+  	audio.onchange = function(){
+  	  var files = this.files;
+  	  var len = files.length 
+  	  if(len == 1){
+  	  	var file = URL.createObjectURL(files[0]); 
+  	          audio_player.src = file; 
+  	  			  audio_player.play();
+  	  }else if(len > 1){
+  	  	//actual random logic
+  	  	  //find a random music number(b/w 0 files.lenght) to files which to be played
+
+            playRandom(audio,files,len)
+  	  }
+  	};
+  </script>
+  </body>
+  </html>
