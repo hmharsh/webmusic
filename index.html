@@ -9,6 +9,9 @@
    <input id="audio_file" required  multiple="multiple" type="file" accept="audio/mp3" /> 
    <button onclick = "changeSong()">Change</button>
 
+<input type="file" id="uploadImage" name="termek_file" class="file_input" multiple/>
+<div id="result" class="uploadPreview">
+
 
 
   <div id = "start"></div>
@@ -79,6 +82,42 @@
     audio.onchange = function(){
     changeSong()
     };
+
+
+
+
+
+
+
+
+
+
+
+
+    window.onload = function() {
+  if (window.File && window.FileList && window.FileReader) {
+    var filesInput = document.getElementById("uploadImage");
+    filesInput.addEventListener("change", function(event) {
+      var files = event.target.files;
+      var output = document.getElementById("result");
+      for (var i = 0; i < files.length; i++) {
+        var file = files[i];
+        if (!file.type.match('image'))
+          continue;
+        var picReader = new FileReader();
+        picReader.addEventListener("load", function(event) {
+          var picFile = event.target;
+          var div = document.createElement("div");
+          div.innerHTML = "<img class='thumbnail' src='" + picFile.result + "'" +
+            "title='" + picFile.name + "'/>";
+          output.insertBefore(div, null);
+        });        
+        picReader.readAsDataURL(file);
+        }
+
+        });
+      }
+    }
   </script>
   </body>
   </html>
