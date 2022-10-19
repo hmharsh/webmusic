@@ -1,1 +1,106 @@
-<mxfile host="app.diagrams.net" modified="2022-10-19T06:57:14.367Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" version="20.4.1" etag="M7PnNHNuH6wSOLJypend" type="github"><diagram id="kk5BYiL54n7vIwzTItMM">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-10-19T07:16:46.364Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="xZ8xWuiF1QRPku2d5Jly" version="20.4.1" type="github">
+  <diagram id="kk5BYiL54n7vIwzTItMM" name="Page-1">
+    <mxGraphModel dx="1017" dy="574" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="nYQIbzi21YlCGTnS5JQk-1" value="Teams" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="119" y="16" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nYQIbzi21YlCGTnS5JQk-2" value="&lt;b&gt;Azure bot framework (&lt;/b&gt;bot type of resource provisioned on azure&lt;b&gt;)&lt;/b&gt;&amp;nbsp;acting as a unified interface between bot logic and multiple communication channels, with advance capabilities for bot management" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="139" y="176" width="580" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nYQIbzi21YlCGTnS5JQk-3" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;Hosted back-end&lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; (developed in node.js) App developed using bot sdk, and hosted using any node.js hosting provider (for POC we use azure app service) that provide API endpoints, It perform following&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;1.&amp;nbsp; Validate the input parameters and ask again for input if provided input is in-appropriate&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;2.&amp;nbsp; Store the state (set of input) for example all required configuration for one VM based on conversation history&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;3.&amp;nbsp; &amp;nbsp;Call API to perform the desired task (like VM creation) with accepted inputs&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;4.&amp;nbsp; &amp;nbsp;Keep the user posted on specific communication channels around the specific&amp;nbsp;activity (VM creation for now) by sending response to bot framework&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="139" y="356" width="580" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="nYQIbzi21YlCGTnS5JQk-5" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="nYQIbzi21YlCGTnS5JQk-1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="179" y="176" as="sourcePoint" />
+            <mxPoint x="414" y="66" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nYQIbzi21YlCGTnS5JQk-10" value="Slack" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="289" y="16" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nYQIbzi21YlCGTnS5JQk-11" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.11;exitY=0.058;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="349.20000000000005" y="176" as="sourcePoint" />
+            <mxPoint x="348.5" y="72.51999999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nYQIbzi21YlCGTnS5JQk-12" value="Web chat" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="459" y="16" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nYQIbzi21YlCGTnS5JQk-13" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.11;exitY=0.058;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="519.2" y="176" as="sourcePoint" />
+            <mxPoint x="518.5" y="72.51999999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nYQIbzi21YlCGTnS5JQk-14" value="Any other communication channel" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="599" y="16" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nYQIbzi21YlCGTnS5JQk-15" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.11;exitY=0.058;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="659.2" y="176" as="sourcePoint" />
+            <mxPoint x="658.5" y="72.51999999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nYQIbzi21YlCGTnS5JQk-16" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="589" y="348" as="sourcePoint" />
+            <mxPoint x="589" y="238" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nYQIbzi21YlCGTnS5JQk-18" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.191;exitY=1.142;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.194;entryY=-0.135;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="nYQIbzi21YlCGTnS5JQk-2" target="nYQIbzi21YlCGTnS5JQk-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="369" y="326" as="sourcePoint" />
+            <mxPoint x="419" y="276" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nYQIbzi21YlCGTnS5JQk-19" value="Each incoming message is sent to back-end app using REST API call" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="109" y="276" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nYQIbzi21YlCGTnS5JQk-20" value="Processed response is send back to bot framework" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="599" y="286" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nYQIbzi21YlCGTnS5JQk-21" value="Azure" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="139" y="599" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nYQIbzi21YlCGTnS5JQk-22" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="200" y="598" as="sourcePoint" />
+            <mxPoint x="200" y="498" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nYQIbzi21YlCGTnS5JQk-23" value="AWS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="293" y="599" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nYQIbzi21YlCGTnS5JQk-24" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="352" y="598" as="sourcePoint" />
+            <mxPoint x="352" y="498" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nYQIbzi21YlCGTnS5JQk-25" value="GCP" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="443" y="599" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nYQIbzi21YlCGTnS5JQk-26" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="501" y="598" as="sourcePoint" />
+            <mxPoint x="501" y="498" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nYQIbzi21YlCGTnS5JQk-27" value="vCenter" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="599" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nYQIbzi21YlCGTnS5JQk-28" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="648" y="598" as="sourcePoint" />
+            <mxPoint x="648" y="498" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
